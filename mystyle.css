@@ -1,0 +1,14 @@
+hr {
+  border: 1px dotted blue;
+}
+#name,
+#message {
+  background-color: lightyellow;
+}
+.sendname {
+  color: blue;
+}
+.display-4 {
+  font-weight: 400;
+  color: blue;
+}

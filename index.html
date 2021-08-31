@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="shortcut icon" href="#" /> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <link rel="shortcut icon" href="FACE05.ico" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <title>Document Test by node</title>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div class="jumbotron">
+        <h1 class="display-4">Send Message 17438</h1>
+        <br />
+        <input id="name" class="form-control" placeholder="Name" />
+        <br />
+        <textarea
+          id="message"
+          class="form-control"
+          placeholder="Message"
+        ></textarea>
+        <br />
+        <button
+          id="send"
+          class="btn btn-warning"
+          onClick="document.location.reload(true)"
+        >
+          <i class="fas fa-envelope-square"></i>&nbsp;Send Message
+        </button>
+      </div>
+      <div id="messages"></div>
+      <script>
+        //var socket = io();
+        $(() => {
+          console.log("Page loaded by Mango");
+          $("#send").click(() => {
+            var message = {
+              name: $("#name").val(),
+              message: $("#message").val(),
+            };
+            postMessage(message);
+          });
+          getMessages();
+        });
+        //socket.on("message", addMessage);
+
+        function addMessage(message) {
+          $("#messages").append(
+            `<h5><span class="sendname">${message.name}</span>:&nbsp  ${message.message}</h5><hr />`
+          );
+        }
+        function getMessages() {
+          $.get("http://localhost:3010/messages", (data) => {
+            console.log(data);
+            data.forEach(addMessage);
+          });
+        }
+        function postMessage(message) {
+          $.post("http://localhost:3010/messages", message);
+        }
+      </script>
+    </div>
+  </body>
+</html>

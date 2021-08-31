@@ -1,0 +1,21 @@
+working folder: C:\Users\judy_\Desktop\Fullstack17438\chatapp>
+test version: C:\Users\judy_\Desktop\Fullstack17438\chatapp> node --version
+test npm: npm --v
+
+create package: npm init --y
+install expressjs: npm install --save express
+start to run: node server.js
+
+git branch -M master
+git remote set-url origin https://github.com/wellsjohn220/mychatapp.git
+git push -u origin master
+
+delete origin: git remote set-url origin https://github.com/wellsjohn220/mychatapp.git
+
+{"name": "James", "message": "What about your mission now."}
+
+npm install --save body-parser
+
+npm install --save socket.io
+
+npm install --save mongoose
