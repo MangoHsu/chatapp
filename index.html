@@ -65,13 +65,21 @@
           );
         }
         function getMessages() {
-          $.get("http://localhost:3010/messages", (data) => {
-            console.log(data);
-            data.forEach(addMessage);
-          });
+          //$.get("http://localhost:3010/messages", (data) => {
+          $.get(
+            "https://infinite-plains-87474.herokuapp.com/messages",
+            (data) => {
+              console.log(data);
+              data.forEach(addMessage);
+            }
+          );
         }
         function postMessage(message) {
-          $.post("http://localhost:3010/messages", message);
+          //$.post("http://localhost:3010/messages", message);
+          $.post(
+            "https://infinite-plains-87474.herokuapp.com/messages",
+            message
+          );
         }
       </script>
     </div>
