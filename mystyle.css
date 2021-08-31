@@ -1,14 +1,18 @@
 hr {
-  border: 1px dotted blue;
+  border: 1px dotted burlywood;
 }
 #name,
 #message {
   background-color: lightyellow;
 }
 .sendname {
-  color: blue;
+  color: yellow;
 }
 .display-4 {
   font-weight: 400;
-  color: blue;
+  font-family: "Lucida Handwriting";
+  color: rgb(194, 161, 118);
+}
+body {
+  background-image: url("Background.jpg");
 }
