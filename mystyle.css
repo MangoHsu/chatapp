@@ -1,5 +1,5 @@
 hr {
-  border: 1px dotted burlywood;
+  border: 2px dotted rgb(151, 135, 222);
 }
 #name,
 #message {
@@ -9,8 +9,8 @@ hr {
   color: rgb(84, 24, 153);
 }
 .display-4 {
-  font-weight: 400;
-  font-family: "Lucida Handwriting";
+  font-weight: 500;
+  font-family: "Georgia";
   color: rgb(194, 161, 118);
 }
 body {
