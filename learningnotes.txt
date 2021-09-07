@@ -4,6 +4,8 @@ test npm: npm --v
 
 create package: npm init --y
 install expressjs: npm install --save express
+Version check: npm list express
+
 start to run: node server.js
 
 git branch -M master
@@ -18,4 +20,5 @@ npm install --save body-parser
 
 npm install --save socket.io
 
-npm install --save mongoose
+MongoDB 
+Install code: npm install --save mongoose		Version check: $ mongod –version

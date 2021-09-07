@@ -45,7 +45,7 @@ app.post('/messages', (req, res) => {
 
 mongoose.connect(dbUrl, (err) => {
     //if (err) return console.log(err);
-    console.log('Mongodb connection successful')
+    console.log('Mongodb connection successful by Mango')
 })
 
 io.on("connection", (socket) => {
